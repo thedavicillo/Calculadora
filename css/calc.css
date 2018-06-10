@@ -1,0 +1,211 @@
+/**** General ****/
+
+:root {
+    --bg-color: rgb(255, 255, 255);
+    --display-color: rgba(47, 58, 73, 0.61);
+    --off-white: rgb(56, 56, 56);
+    --light-green: hsla(130, 90%, 65%, 1);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    color: var(--dark-bg-color);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    /* Webkit */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE 10  */
+    /* border-radius: 3px; */
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-size: 36px;
+}
+
+.calc-body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1.5fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    max-height: 640px;
+    max-width: 480px;
+    padding: 5px;
+}
+
+.display {
+    grid-row: 1;
+    grid-column: 1 / 5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: var(--bg-color);
+    overflow: hidden;
+    background-color: var(--display-color);
+    margin-bottom: 10px;
+    border: 1px solid var(--off-white);
+}
+
+
+/**** Buttons ****/
+
+button {
+    background-color: var(--off-white);
+    font-size: 2rem;
+    border: none;
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
+button,
+button:focus,
+button:active {
+    outline: none;
+    padding: 0;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:active {
+    background-color: var(--light-green);
+}
+
+.btn-equals {
+    grid-row: 6;
+    grid-column: 3 / 5;
+    background: var(--light-green);
+}
+
+.btn-equals:active {
+    background: hsla(135, 90%, 60%, 1);
+}
+
+.btn-plus {
+    grid-row: 5;
+    grid-column: 4;
+}
+
+.btn-minus {
+    grid-row: 4;
+    grid-column: 4;
+}
+
+.btn-times {
+    grid-row: 3;
+    grid-column: 4;
+}
+
+.btn-divide {
+    grid-row: 2;
+    grid-column: 4;
+}
+
+.btn-clear {
+    grid-row: 2;
+    grid-column: 1;
+    background: hsla(1, 75%, 60%, 1);
+    color: var(--bg-color);
+}
+
+.btn-clear:active {
+    background: hsla(1, 75%, 50%, 1);
+}
+
+.btn-del {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 1.5rem;
+}
+
+.btn-dot {
+    grid-row: 6;
+    grid-column: 2;
+}
+
+.btn-zero {
+    grid-row: 6;
+    grid-column: 1;
+}
+
+.btn-one {
+    grid-row: 5;
+    grid-column: 1;
+}
+
+.btn-two {
+    grid-row: 5;
+    grid-column: 2;
+}
+
+.btn-three {
+    grid-row: 5;
+    grid-column: 3;
+}
+
+.btn-four {
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.btn-five {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+.btn-six {
+    grid-row: 4;
+    grid-column: 3;
+}
+
+.btn-seven {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.btn-eight {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.btn-nine {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.btn-pos-neg {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+
+/**** Responsive Design ****/
+
+@media screen and (max-width: 420px),
+screen and (max-height: 420px) {
+    .display {
+        font-size: 7vmin;
+    }
+}

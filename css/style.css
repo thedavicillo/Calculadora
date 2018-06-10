@@ -1,0 +1,62 @@
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    color: white;
+    font-size: 3rem;
+    font-family: calibri;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    background: #EEE;
+    background: #353535;
+    align-self: stretch;
+    -webkit-app-region: drag;
+}
+
+#title {
+    flex: 1;
+    color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 1rem;
+}
+
+#content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background: black;
+    align-items: center;
+}
+
+#text {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.option {
+    color: black;
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.option:hover {
+    background: red;
+}
+
+.option i {
+    color: white;
+}
