@@ -1,0 +1,51 @@
+{
+    "name": "calculadora",
+    "version": "0.0.1",
+    "description": "Calculadora cientifica con electron, bootstrap, jquery y javascript",
+    "main": "index.js",
+    "scripts": {
+        "postinstall": "install-app-deps",
+        "start": "npm install && electron ./app",
+        "pack": "build --dir",
+        "dist": "build"
+    },
+    "build": {
+        "appId": "clc",
+        "dmg": {
+            "contents": [{
+                    "x": 110,
+                    "y": 150
+                },
+                {
+                    "x": 240,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ]
+        },
+        "win": {
+            "target": "NSIS"
+        }
+    },
+    "devDependencies": {
+        "electron": "latest",
+        "electron-builder": "latest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thedavicillo/Calculadora.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thedavicillo/Calculadora/issues"
+    },
+    "homepage": "https://github.com/thedavicillo/Calculadora#readme"
+}
