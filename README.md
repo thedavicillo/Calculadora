@@ -1,2 +1,2 @@
 # Calculadora
-Calculadora cientifica con electron, bootstrap, jquery y javascript
+Calculadora con electron, bootstrap, jquery y javascript
